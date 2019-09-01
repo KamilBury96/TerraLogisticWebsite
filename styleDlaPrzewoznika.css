@@ -1,0 +1,988 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Saira', sans-serif;
+    line-height: 1.3;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0 auto;
+
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100vw;
+}
+
+
+
+nav.main {
+    width: 100%;
+    display: flex;
+
+}
+
+.logo {
+    height: 50px;
+    margin: 40px 5vw 10px 5vw;
+}
+
+.menuMain {
+    display: flex;
+    list-style: none;
+    flex-shrink: 0;
+    margin-left: 5vw;
+}
+
+.language {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 5vw;
+}
+
+nav.main ul.language li {
+    margin: 0px 5px;
+
+}
+
+nav.main ul.language li a {
+    display: flex;
+}
+
+nav.main ul.language li.active a {
+    color: #13B3AB;
+}
+
+.plFlag {
+    background-image: url(images/pl.svg);
+    height: 15px;
+    width: 20px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2B2F40;
+    margin: 5px 2px;
+}
+
+.enFlag {
+    background-image: url(images/gb.svg);
+    height: 15px;
+    width: 20px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2B2F40;
+    margin: 5px 2px;
+}
+
+
+nav.main ul li {
+    margin: 0px 20px;
+    padding: 5px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+nav.main ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background-color: #13B3AB;
+    transition: 0.5s
+}
+
+nav.main ul li:hover::after {
+    left: 0;
+}
+
+nav.main ul li a {
+
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Saira', sans-serif;
+    font-weight: 300;
+    color: black;
+
+}
+
+nav.main ul li:hover a {
+    color: #13B3AB;
+
+}
+
+.clearfix.main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+.borderFullWidth {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #E7E7E7;
+}
+
+
+@media (orientation: landscape) and (max-width : 1024px) {
+    nav.main ul li a {
+        font-size: 16px;
+    }
+
+    .language {
+        margin-left: 0px;
+        flex-shrink: 1;
+        justify-content: center;
+    }
+}
+
+@media (orientation: portrait) and (max-width : 1024px) {
+
+
+    nav.main ul li a {
+        font-size: 16px;
+    }
+
+    .logo {
+        height: 50px;
+        margin: 20px 20px;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width : 768px) {
+    nav.main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .language {
+        justify-content: center;
+
+    }
+
+    .menuMain {
+        margin-left: 0px;
+        flex-shrink: 1;
+        justify-content: center;
+    }
+
+    nav.main ul li a {
+        font-size: 12px;
+    }
+
+    .logo {
+        height: 35px;
+        margin: 20px 15px;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width : 420px) {
+
+    .menuMain {
+        width: 90%;
+        justify-content: center;
+        flex-shrink: 1;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    nav.main {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    nav.main ul li {
+        margin: 0px 5px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width : 820px) {
+
+
+    .logo {
+        height: 50px;
+        margin: 10px 0px;
+    }
+
+    nav.main {
+        width: 100%;
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+div.belka {
+    margin-top: 25px;
+    max-width: 1600px;
+    width: 100vw;
+    height: 10px;
+    background-color: #13B3AB;
+}
+
+div.zapytanie {
+    display: flex;
+    height: 40vh;
+    overflow: hidden;
+}
+
+div.zapytanie div,
+div.formularz div {
+    flex-basis: 50%;
+
+}
+
+div.zapytanie div:nth-of-type(1) {
+    background-color: white;
+    border-left: 20px solid #00293F;
+    border-top: 20px solid #00293F;
+
+}
+
+div.formularz div.lewa {
+    background-color: white;
+    border-left: 20px solid #00293F;
+    border-bottom: 20px solid #00293F;
+
+}
+
+div.background {
+    background-image: url(images/header3.jpg);
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+div.zapytanie h1,
+div.formularz h1 {
+    margin: 30px;
+    width: 80%;
+    color: #2F3344;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: 'Saira Condensed', sans-serif;
+    line-height: 1.2;
+
+}
+
+div.zapytanie div p,
+div.formularz div p {
+    color: #666C84;
+    width: 60%;
+    font-size: 16px;
+    margin-left: 30px;
+
+}
+
+div.zapytanie1 {
+    display: flex;
+    height: 40vh;
+}
+
+div.zapytanie1 div {
+    flex-basis: 50%;
+}
+
+div.zapytanie1 div:nth-of-type(2) {
+    background-color: #00293F;
+}
+
+div.zapytanie1 .background1 {
+    background-image: url(images/dlaprzw.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+div.zapytanie1 h1 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-right: 30px;
+    width: 100%;
+    color: #13B3AB;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: right;
+    font-family: 'Saira Condensed', sans-serif;
+    line-height: 1.2;
+
+}
+
+div.zapytanie1 p {
+    color: white;
+    padding-right: 30px;
+    padding-left: 30%;
+    width: 100%;
+    text-align: right;
+    font-size: 25px;
+    font-family: 'Saira Condensed', sans-serif;
+    height: 15%;
+}
+
+.zapytanie1 div p i {
+    margin-right: 10px;
+    font-size: 25px;
+    color: #13B3AB;
+}
+
+
+
+div.lewa h1 i {
+    margin-left: 20px;
+
+}
+
+div.formularz .background2 {
+    background-image: url(images/laptop-3187095_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 41, 63, 0.8);
+    background-blend-mode: multiply;
+    overflow: hidden;
+}
+
+
+
+div.formularz {
+    display: flex;
+    min-height: 70vh;
+}
+
+div.formularz div.lewa {
+    height: 40vh;
+}
+
+div.background2 {
+    display: flex;
+    justify-content: center;
+}
+
+div.background2 div.formularzProstokat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    flex-basis: 60%;
+    height: 65%;
+    background-color: #fff;
+    border-radius: 5%;
+}
+
+div.formularzProstokat h2 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
+    color: #00293F;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Saira Condensed', sans-serif;
+    line-height: 1.2;
+
+}
+
+div.background2 div.formularzProstokat p.formularzGora {
+    margin: 0px 0px 15px 0px;
+    color: #666C84;
+    width: 80%;
+    font-size: 14px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+
+}
+
+form input {
+    height: 10%;
+    width: 80%;
+    border: 0;
+    margin-bottom: 10px;
+    padding: 10px 0px 10px 5px;
+    flex-basis: 45%;
+    background-color: #F1F1F1;
+    border-radius: 8%;
+    font-size: 16px;
+}
+
+form input.wyslij {
+    border: 0px;
+    padding: 10px;
+    background-color: rgb(0, 41, 63);
+    border-radius: 5%;
+    font-size: 15px;
+    color: white;
+    align-self: center;
+
+}
+
+
+
+@media (orientation: landscape) and (min-width : 1024px) {
+
+    .zapytanie h1,
+    .zapytanie p,
+    .zapytanie1 h1,
+    .zapytanie1 p,
+    .lewa h1,
+    .lewa p {
+        transform: translateY(-30px);
+        transition: 1.5s;
+    }
+
+    .zapytanie h1.active,
+    .zapytanie p.active,
+    .zapytanie1 h1.active,
+    .zapytanie1 p.active,
+    .lewa h1.active,
+    .lewa p.active {
+        transform: translateY(0);
+
+    }
+}
+
+@media (orientation: landscape) and (max-width : 1280px) {
+
+    div.zapytanie h1,
+    div.formularz h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    div.zapytanie1 h1 {
+        font-size: 30px;
+
+    }
+
+    div.zapytanie div p,
+    div.formularz div.lewa p {
+        width: 85%;
+        font-size: 12px;
+    }
+
+    div.zapytanie1 p {
+
+        padding-right: 30px;
+        padding-left: 20%;
+        font-size: 12px;
+
+    }
+
+    form input {
+
+
+        padding: 10px 0px 10px 5px;
+        flex-basis: 45%;
+        background-color: #F1F1F1;
+        border-radius: 8%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 980px) {
+
+    div.zapytanie div p,
+    div.formularz div p {
+        font-size: 12px;
+    }
+
+    div.zapytanie1 p {
+        font-size: 12px;
+
+    }
+
+    div.zapytanie h1,
+    div.formularz h1 {
+        font-size: 30px;
+    }
+
+    div.zapytanie1 h1 {
+        font-size: 30px;
+
+    }
+
+    div.background2 div.formularzProstokat {
+
+        flex-basis: 70%;
+        height: 85%;
+
+    }
+}
+
+@media (orientation: portrait) and (max-width : 500px) {
+
+    div.background2 div.formularzProstokat {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        margin-top: 5%;
+        flex-basis: 60%;
+        min-height: 60%;
+        margin-bottom: 5%;
+    }
+
+    div.formularz div.lewa {
+        border-left: none;
+        border-right: 20px solid #00293F;
+        height: 45vh;
+    }
+
+    div.zapytanie1 {
+
+        display: flex;
+        min-height: 45vh;
+        flex-wrap: wrap;
+    }
+
+    div.zapytanie1 div {
+        flex-basis: 100%;
+        border-top: 10px solid #13B3AB;
+        border-bottom: 10px solid #13B3AB;
+    }
+
+    div.zapytanie {
+        display: flex;
+        height: 45vh;
+        flex-wrap: wrap;
+    }
+
+    div.zapytanie div,
+    div.formularz div {
+        flex-basis: 100%;
+    }
+
+    div.formularz {
+        flex-wrap: wrap;
+
+    }
+
+    div.background2 {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    div.zapytanie1 .background1,
+    div.background {
+        transform: scale(0);
+        display: none;
+    }
+}
+
+@media (orientation: portrait) and (max-width : 420px) {
+    div.zapytanie1 p {
+
+        padding-right: 30px;
+        padding-left: 20%;
+        font-size: 12px;
+
+    }
+
+    div.zapytanie div p,
+    div.formularz div.lewa p {
+        width: 85%;
+        font-size: 12px;
+    }
+
+}
+
+@media (orientation: portrait) and (max-width : 380px) {
+
+    div.background2 div.formularzProstokat p.formularzGora {
+        margin: 0px 0px 15px 0px;
+        color: #666C84;
+        width: 80%;
+        font-size: 12px;
+
+    }
+
+    div.formularzProstokat h2 {
+
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+
+
+    }
+
+    div.zapytanie h1,
+    div.formularz h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div.zapytanie1 h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    div.zapytanie1 p {
+
+        padding-right: 30px;
+        padding-left: 5%;
+        font-size: 12px;
+
+    }
+
+    div.zapytanie div p,
+    div.formularz div.lewa p {
+        width: 90%;
+        font-size: 12px;
+    }
+
+}
+
+@media (orientation: portrait) and (max-width : 320px) {
+
+    div.zapytanie h1,
+    div.formularz h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div.zapytanie1 h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    div.zapytanie1 p {
+
+        padding-right: 30px;
+        padding-left: 5%;
+        font-size: 10px;
+
+    }
+
+    div.zapytanie div p,
+    div.formularz div.lewa p {
+        width: 90%;
+        font-size: 11px;
+        padding-right: 10px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width : 840px) {
+
+    div.formularz {
+        height: 120vh;
+    }
+
+    div.formularz div.lewa {
+        height: 100vh;
+    }
+
+    div.zapytanie1,
+    div.zapytanie {
+        display: flex;
+        height: 100vh;
+    }
+}
+
+@media (orientation: landscape) and (max-width : 600px) {
+    div.formularz {
+        height: 140vh;
+    }
+
+    div.background2 div.formularzProstokat p.formularzGora {
+        margin: 0px 0px 15px 0px;
+        color: #666C84;
+        width: 80%;
+        font-size: 12px;
+
+    }
+
+    div.formularzProstokat h2 {
+
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+
+
+    }
+
+    div.zapytanie h1,
+    div.formularz h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div.zapytanie1 h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+}
+
+.opinion {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 50px;
+    border: 1px solid #E7E7E7;
+
+}
+
+.opinionDesc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.opinionDesc p:nth-of-type(1) {
+    color: #13B3AB;
+    font-size: 25px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.opinionDesc p:nth-of-type(2) {
+    color: #2B2F40;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+}
+
+p.opinia {
+    text-align: center;
+    padding: 0px 35px;
+    min-height: 51px;
+
+}
+
+p.leftQuote {
+    align-self: flex-end;
+    color: #E7E7E7;
+}
+
+p.rightQuote {
+    color: #E7E7E7;
+}
+
+p.rola {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+p.osoba {
+    margin-top: 10px;
+    color: #13B3AB;
+    font-size: 30px;
+    text-align: right;
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+}
+
+.dots {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dots span {
+
+    background-color: #E7E7E7;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dots span.active {
+    background-color: #fff;
+    border: 1px solid #13B3AB;
+}
+
+@media (orientation: portrait) and (max-width : 420px) {
+    .opinionDesc p:nth-of-type(2) {
+        font-size: 25px;
+    }
+
+    .slider {
+        width: 90%;
+    }
+}
+
+footer {
+    margin-top: 50px;
+    width: 100vw;
+    background-color: #00293F;
+}
+
+.wrapperFooter {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: 0 auto;
+
+
+}
+
+.footerKolumny {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-basis: 30%;
+
+
+
+}
+
+div.footernav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-basis: 30%;
+
+}
+
+.footerKolumny p,
+.footernav p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.3;
+    font-family: 'Saira Condensed', sans-serif;
+
+}
+
+.footerKolumny p:nth-of-type(1),
+.footernav p:nth-of-type(1) {
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.footerKolumny i {
+    margin-right: 10px;
+    color: #13B3AB;
+}
+
+nav.footernav {
+    width: 100%;
+}
+
+
+nav.footernav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+nav.footernav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav.footernav ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Saira', sans-serif;
+    font-weight: 300;
+    color: white;
+
+}
+
+nav.footernav ul li:hover a {
+    color: #13B3AB;
+}
+
+@media (orientation: portrait) and (max-width : 420px) {
+    .footerKolumny {
+        flex-basis: 45%;
+        line-height: 30vh;
+    }
+
+    .wrapperFooter {
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+
+    div.footernav {
+        margin: 0 20px 20px 20px;
+        flex-basis: 100%;
+    }
+}
